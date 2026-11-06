@@ -1,0 +1,484 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f7f3ee;
+    color: #222;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.header-inicio {
+    background-color: #000;
+    padding: 15px 30px;
+}
+
+.header-contenido {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.logo {
+    color: #fff;
+    font-size: 24px;
+    font-weight: 800;
+}
+
+.nav-principal {
+    display: flex;
+    gap: 25px;
+}
+
+.nav-principal a {
+    color: #fff;
+    font-size: 15px;
+    transition: color 0.3s ease;
+}
+
+.nav-principal a:hover {
+    color: #f6a8b8;
+}
+
+.auth-botones {
+    display: flex;
+    gap: 12px;
+}
+
+.btn-login,
+.btn-registro,
+.btn-inicio {
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-size: 14px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+.btn-cuenta {
+    padding: 10px 30px;
+    border-radius: 25px;
+    background-color: #f6a8b8;
+    color: #000;
+    border: 2px solid #f6a8b8;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-cuenta:hover {
+    background-color: #f4899e;
+    border-color: #f4899e;
+}
+
+.btn-login,
+.btn-inicio {
+    background-color: transparent;
+    color: #fff;
+    border: 2px solid #fff;
+}
+
+.btn-login:hover,
+.btn-inicio:hover {
+    background-color: #fff;
+    color: #000;
+}
+
+.btn-registro {
+    background-color: #f6a8b8;
+    color: #000;
+    border: 2px solid #f6a8b8;
+}
+
+.btn-registro:hover {
+    background-color: #f4899e;
+    border-color: #f4899e;
+}
+
+.hero-inicio {
+    background-color: #fce4ec;
+    padding: 80px 30px;
+    text-align: center;
+}
+
+.hero-texto h1 {
+    font-size: 42px;
+    color: #000;
+    margin-bottom: 15px;
+}
+
+.hero-texto p {
+    font-size: 18px;
+    color: #444;
+}
+
+.categorias-inicio {
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 0 30px;
+}
+
+.categorias-inicio h2 {
+    text-align: center;
+    font-size: 32px;
+    color: #000;
+    margin-bottom: 40px;
+}
+
+.categorias-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.categoria-tarjeta {
+    background-color: #fff;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.categoria-tarjeta:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.categoria-imagen {
+    width: 100%;
+    height: 220px;
+    background-color: #fce4ec;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.categoria-imagen img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.categoria-tarjeta h3 {
+    font-size: 22px;
+    color: #000;
+    margin: 20px 20px 10px;
+}
+
+.categoria-tarjeta p {
+    font-size: 15px;
+    color: #666;
+    margin: 0 20px 20px;
+}
+
+.pagina-auth {
+    min-height: 80vh;
+    background-color: #fce4ec;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 30px;
+}
+
+.auth-tarjeta {
+    background-color: #fff;
+    width: 100%;
+    max-width: 420px;
+    padding: 35px;
+    border-radius: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    text-align: center;
+}
+
+.auth-tarjeta h2 {
+    color: #000;
+    margin-bottom: 25px;
+    font-size: 28px;
+}
+
+.error-msg {
+    background-color: #ffe0e6;
+    color: #d63384;
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.exito-msg {
+    background-color: #e6ffea;
+    color: #006644;
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.form-auth {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    text-align: left;
+}
+
+.form-auth label {
+    color: #000;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.form-auth input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 25px;
+    font-size: 14px;
+    background-color: #f9f9f9;
+}
+
+.btn-auth {
+    background-color: #000;
+    color: #fff;
+    padding: 12px;
+    border: none;
+    border-radius: 25px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-auth:hover {
+    background-color: #f6a8b8;
+    color: #000;
+}
+
+.auth-pie {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #666;
+}
+
+.auth-pie a {
+    color: #f6a8b8;
+    font-weight: 600;
+}
+
+.auth-pie a:hover {
+    text-decoration: underline;
+}
+
+.footer-inicio {
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    margin-top: 50px;
+}
+/* === Página de Categoría === */
+.pagina-categoria {
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 0 30px;
+}
+
+.pagina-categoria h1 {
+    text-align: center;
+    font-size: 36px;
+    color: #000;
+    margin-bottom: 40px;
+}
+
+.sin-productos {
+    text-align: center;
+    font-size: 18px;
+    color: #666;
+    padding: 40px;
+}
+
+.productos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 25px;
+}
+
+.producto-tarjeta {
+    background-color: #fff;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.producto-tarjeta:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.producto-imagen {
+    width: 100%;
+    height: 220px;
+    background-color: #fce4ec;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.producto-imagen img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.imagen-vacia {
+    width: 100%;
+    height: 100%;
+    background-color: #fce4ec;
+}
+
+.producto-tarjeta h3 {
+    font-size: 18px;
+    color: #000;
+    margin: 15px 15px 8px;
+}
+
+.producto-desc {
+    font-size: 14px;
+    color: #666;
+    margin: 0 15px 10px;
+}
+
+.producto-precio {
+    font-size: 20px;
+    font-weight: 700;
+    color: #000;
+    margin: 0 15px 15px;
+}
+
+.btn-comprar {
+    background-color: #000;
+    color: #fff;
+    border: none;
+    padding: 10px 25px;
+    border-radius: 25px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-comprar:hover {
+    background-color: #f6a8b8;
+    color: #000;
+}
+/* === Página de Categoría === */
+.pagina-categoria {
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 0 30px;
+}
+
+.pagina-categoria h1 {
+    text-align: center;
+    font-size: 36px;
+    color: #000;
+    margin-bottom: 40px;
+}
+
+.sin-productos {
+    text-align: center;
+    font-size: 18px;
+    color: #666;
+    padding: 40px;
+}
+
+.productos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 25px;
+}
+
+.producto-tarjeta {
+    background-color: #fff;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.producto-tarjeta:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.producto-imagen {
+    width: 100%;
+    height: 220px;
+    background-color: #fce4ec;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.producto-imagen img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.imagen-vacia {
+    width: 100%;
+    height: 100%;
+    background-color: #fce4ec;
+}
+
+.producto-tarjeta h3 {
+    font-size: 18px;
+    color: #000;
+    margin: 15px 15px 8px;
+}
+
+.producto-desc {
+    font-size: 14px;
+    color: #666;
+    margin: 0 15px 10px;
+}
+
+.producto-precio {
+    font-size: 20px;
+    font-weight: 700;
+    color: #000;
+    margin: 0 15px 15px;
+}
+
+.btn-comprar {
+    background-color: #000;
+    color: #fff;
+    border: none;
+    padding: 10px 25px;
+    border-radius: 25px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-comprar:hover {
+    background-color: #f6a8b8;
+    color: #000;
+}
